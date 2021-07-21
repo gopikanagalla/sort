@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include"header.h"
 int partition(int a[],int l,int u)
 {
 	int v,i,j,temp;
@@ -34,19 +34,3 @@ void quicksort(int a[],int l,int u)
 		quicksort(a,j+1,u);
 	}
 }
-int main()
-{
-	int a[50],n,i;
-	printf("enter no.of elements:");
-	scanf("%d",&n);
-	printf("enter array elements:");
-	for(i=0;i<n;i++)
-		scanf("%d",&a[i]);
-	quicksort(a,0,n-1);
-	printf("after sorting:");
-	for(i=0;i<n;i++)
-		printf("%d ",a[i]);
-	printf("\n");
-	return 0;
-}
-
